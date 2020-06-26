@@ -1,0 +1,14 @@
+{
+  "name": "respite-client",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "_prettier": "prettier './{**/,/}*.{ts,tsx,md,yml,yaml,json,js}'",
+    "format": "npm run _prettier -- --write",
+    "lint": "npm run _prettier -- --check"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  }
+}
