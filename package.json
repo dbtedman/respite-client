@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "_prettier": "prettier './{**/,/}*.{ts,tsx,md,yml,yaml,json,js}'",
+    "_prettier": "prettier './**/*.{md,yml,yaml,json,ts,js}'",
     "format": "npm run _prettier -- --write",
     "lint": "npm run _prettier -- --check"
   },
