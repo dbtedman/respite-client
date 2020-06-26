@@ -4,9 +4,17 @@
 
 Providing respite by matching desired capacity to available talent.
 
-## Getting Started
+-   [How to get started for development?](#how-to-get-started-for-development)
+-   [Want to lean more?](#want-to-lean-more)
+
+## How to get started for development?
 
 _Content to come._
+
+## What is the Respite Platform?
+
+-   [Respite Client](https://github.com/dbtedman/respite-client)
+-   [Respite Server](https://github.com/dbtedman/respite-server)
 
 ## Want to lean more?
 
