@@ -5,6 +5,7 @@
 Providing respite by matching desired capacity to available talent.
 
 -   [How to get started for development?](#how-to-get-started-for-development)
+-   [What is the Respite Platform?](#what-is-the-respite-platform)
 -   [Want to lean more?](#want-to-lean-more)
 
 ## How to get started for development?
