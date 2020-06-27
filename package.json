@@ -6,9 +6,11 @@
   "scripts": {
     "_prettier": "prettier './**/*.{md,yml,yaml,json,ts,js}'",
     "format": "npm run _prettier -- --write",
-    "lint": "npm run _prettier -- --check"
+    "lint": "npm run _prettier -- --check",
+    "test": "echo 'Implement Me!'"
   },
   "devDependencies": {
+    "husky": "4.2.5",
     "prettier": "2.0.5"
   }
 }
