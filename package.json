@@ -6,7 +6,8 @@
   "scripts": {
     "_prettier": "prettier './**/*.{md,yml,yaml,json,ts,js}'",
     "_eslint": "yarn eslint . --ext .js,.ts",
-    "build": "webpack",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
     "format": "yarn _prettier --write && yarn _eslint --fix",
     "lint": "yarn _prettier --check && yarn _eslint",
     "test": "jest --coverage"
@@ -35,5 +36,8 @@
     "typescript": "3.9.5",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.12"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
   }
 }
