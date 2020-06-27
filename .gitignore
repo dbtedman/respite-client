@@ -12,3 +12,6 @@
 
 # Don't include test results
 /coverage/
+
+# Don't include any log files
+*.log

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
+  "snyk": true,
   "scripts": {
     "_eslint": "yarn eslint . --ext .js,.ts",
     "_prettier": "prettier './**/*.{md,yml,yaml,json,ts,js}'",
@@ -10,11 +11,10 @@
     "build-storybook": "build-storybook",
     "format": "yarn _prettier --write && yarn _eslint --fix",
     "lint": "yarn _prettier --check && yarn _eslint",
+    "security": "snyk test",
     "start": "webpack-dev-server --mode development --open --hot",
     "storybook": "start-storybook -p 6006",
-    "test": "jest --coverage",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "@babel/core": "7.10.3",
@@ -42,14 +42,13 @@
     "react": "16.13.1",
     "react-docgen-typescript-loader": "3.7.2",
     "react-dom": "16.13.1",
+    "snyk": "1.349.0",
     "source-map-loader": "1.0.0",
     "ts-jest": "26.1.1",
     "ts-loader": "7.0.5",
     "typescript": "3.9.5",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.12",
-    "webpack-dev-server": "3.11.0",
-    "snyk": "^1.349.0"
-  },
-  "snyk": true
+    "webpack-dev-server": "3.11.0"
+  }
 }
