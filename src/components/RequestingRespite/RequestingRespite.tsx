@@ -1,3 +1,8 @@
-import * as React from "react";
+import React from "react";
+import Button from "@material-ui/core/Button";
 
-export const RequestingRespite = (): JSX.Element => <div>Hello, World!</div>;
+export const RequestingRespite = (): JSX.Element => (
+    <Button variant="contained" color="primary">
+        Hello, World!
+    </Button>
+);

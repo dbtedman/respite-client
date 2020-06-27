@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from 'react';
 import "@testing-library/jest-dom";
 import { render, RenderResult } from "@testing-library/react";
 
