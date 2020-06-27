@@ -1,0 +1,39 @@
+#------------------------------------------------------------------------------
+#
+# ESLint Configuration, https://eslint.org/docs/user-guide/configuring
+#
+# Based on https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md
+#
+#  - https://yarnpkg.com/package/@typescript-eslint/eslint-plugin
+#  - https://yarnpkg.com/package/@typescript-eslint/parser
+#  - https://yarnpkg.com/package/eslint-config-prettier
+#  - https://yarnpkg.com/package/eslint-plugin-jest
+#  - https://yarnpkg.com/package/eslint-plugin-promise
+#  - https://yarnpkg.com/package/eslint-plugin-security-node
+#
+#------------------------------------------------------------------------------
+---
+root: true
+parser: "@typescript-eslint/parser"
+plugins:
+    - "@typescript-eslint"
+    - "jest"
+    - "security-node"
+    - "promise"
+extends:
+    - "eslint:recommended"
+    - "plugin:@typescript-eslint/eslint-recommended"
+    - "plugin:@typescript-eslint/recommended"
+    - "prettier/@typescript-eslint"
+    - "plugin:jest/recommended"
+    - "plugin:security-node/recommended"
+    - "plugin:promise/recommended"
+    - "plugin:react/recommended"
+rules: {}
+env:
+    browser: true
+    node: true
+    jest: true
+settings:
+    react:
+        version: "detect"

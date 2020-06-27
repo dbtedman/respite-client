@@ -8,7 +8,9 @@
 
 ## Dependency Vulnerability Scanning
 
-_Content to come._
+[![NPM Known Vulnerabilities](https://snyk.io/test/github/dbtedman/respite-client/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dbtedman/respite-client?targetFile=package.json)
+
+Provided by [Snyk](https://snyk.io/test/github/dbtedman/respite-client).
 
 ## Security Disclosure Policy
 

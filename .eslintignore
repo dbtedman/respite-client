@@ -1,17 +1,14 @@
 #-------------------------------------------------------------------------------
 #
-# Prettier Ignores, https://prettier.io/docs/en/ignore.html
+# ESLint Ignore Configuration, https://eslint.org/docs/user-guide/configuring
 #
 #-------------------------------------------------------------------------------
 
 # Don't include build output
 /dist/
 
-# Don't include NPM dependencies
+# Don't lint node_modules
 /node_modules/
 
-# Don't include auto-generated lock file
-/yarn.lock
-
-# Don't include test results
+# Don't lint test
 /coverage/

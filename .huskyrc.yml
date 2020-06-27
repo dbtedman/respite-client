@@ -1,0 +1,12 @@
+#-------------------------------------------------------------------------------
+#
+# Husky Configuration, https://github.com/typicode/husky
+#
+# Ensures that linting and testing tasks are run before changes can be
+# committed. This will work to avoid breaking changes from ending up failing
+# ci builds.
+#
+#-------------------------------------------------------------------------------
+---
+hooks:
+    pre-commit: "yarn lint && yarn test"
