@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "_prettier": "prettier './**/*.{md,yml,yaml,json,ts,js}'",
-    "format": "npm run _prettier -- --write",
-    "lint": "npm run _prettier -- --check",
+    "format": "yarn _prettier --write",
+    "lint": "yarn _prettier --check",
     "test": "echo 'Implement Me!'"
   },
   "devDependencies": {

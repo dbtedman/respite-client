@@ -2,6 +2,8 @@
 
 > NOTE: Pre-release software, not for production use.
 
+[![Test Workflow Status](https://github.com/dbtedman/respite-client/workflows/Test/badge.svg)](https://github.com/dbtedman/respite-client/actions?workflow=Test)
+
 Providing respite by matching desired capacity to available talent.
 
 -   [How to get started for development?](#how-to-get-started-for-development)
