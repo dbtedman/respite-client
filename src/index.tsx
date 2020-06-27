@@ -7,5 +7,5 @@ ReactDOM.render(
     <div>
         <RequestingRespite />
     </div>,
-    document.getElementById("example")
+    document.getElementById("root")
 );
