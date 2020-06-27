@@ -4,4 +4,8 @@
 #
 #-------------------------------------------------------------------------------
 
+# Don't include NPM dependencies
 /node_modules/
+
+# Don't include test results
+/coverage/

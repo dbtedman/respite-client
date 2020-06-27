@@ -7,10 +7,14 @@
     "_prettier": "prettier './**/*.{md,yml,yaml,json,ts,js}'",
     "format": "yarn _prettier --write",
     "lint": "yarn _prettier --check",
-    "test": "echo 'Implement Me!'"
+    "test": "jest --coverage"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@types/jest": "26.0.3",
     "husky": "4.2.5",
-    "prettier": "2.0.5"
+    "jest": "26.1.0",
+    "prettier": "2.0.5",
+    "ts-jest": "26.1.1",
+    "typescript": "3.9.5"
   }
 }

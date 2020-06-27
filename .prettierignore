@@ -4,5 +4,11 @@
 #
 #-------------------------------------------------------------------------------
 
+# Don't include NPM dependencies
 /node_modules/
+
+# Don't include auto-generated lock file
 /yarn.lock
+
+# Don't include test results
+/coverage/
