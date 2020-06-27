@@ -4,6 +4,9 @@
 #
 #-------------------------------------------------------------------------------
 
+# Don't include build output
+/dist/
+
 # Don't lint node_modules
 /node_modules/
 

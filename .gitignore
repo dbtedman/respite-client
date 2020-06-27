@@ -4,6 +4,9 @@
 #
 #-------------------------------------------------------------------------------
 
+# Don't include build output
+/dist/
+
 # Don't include NPM dependencies
 /node_modules/
 
