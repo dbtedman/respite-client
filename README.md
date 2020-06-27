@@ -13,7 +13,9 @@ Providing respite by matching desired capacity to available talent.
 
 ## How to get started for development?
 
-_Content to come._
+```shell script
+yarn serve
+```
 
 ## What is the Respite Platform?
 
