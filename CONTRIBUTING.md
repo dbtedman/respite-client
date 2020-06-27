@@ -37,6 +37,8 @@ yarn storybook
 
 -   [Material Design](https://material.io/design)
 -   [Material UI](https://material-ui.com/)
+-   [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 -   [Storybook / Storybook for React](https://storybook.js.org/docs/guides/guide-react/)
 -   [Storybook / TypeScript Config](https://storybook.js.org/docs/configurations/typescript-config/)
+-   [The Practical Guide to Start React Testing Library with TypeScript.](https://medium.com/javascript-in-plain-english/the-practical-guide-to-start-react-testing-library-with-typescript-d386804a018)
 -   [TypeScript / React & Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
