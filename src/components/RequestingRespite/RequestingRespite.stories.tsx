@@ -1,9 +1,13 @@
 import React from "react";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 import { RequestingRespite } from "./RequestingRespite";
 
 export const RequestingRespiteDefault = (): JSX.Element => (
-    <RequestingRespite />
+    <React.Fragment>
+        <CssBaseline />
+        <RequestingRespite />
+    </React.Fragment>
 );
 
 export default {
