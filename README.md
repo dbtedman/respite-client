@@ -3,7 +3,6 @@
 > NOTE: Pre-release software, not for production use.
 
 [![Test Workflow Status](https://github.com/dbtedman/respite-client/workflows/Test/badge.svg)](https://github.com/dbtedman/respite-client/actions?workflow=Test)
-[![NPM Known Vulnerabilities](https://snyk.io/test/github/dbtedman/respite-client/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dbtedman/respite-client?targetFile=package.json)
 
 Providing respite by matching desired capacity to available talent.
 
