@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
+import { AnyAction } from "redux";
+import { RequestRespiteState } from "redux/reducers/RequestRespite";
 
 const useStyles = makeStyles((theme) => ({
     wrap: {
@@ -28,12 +30,20 @@ const useStyles = makeStyles((theme) => ({
 export interface RequestingRespiteProps {
     name?: string;
     lessonDescription?: string;
+    updateAction?: (payload: RequestRespiteState) => AnyAction;
 }
 
 export const RequestingRespite = (
     props: RequestingRespiteProps
 ): JSX.Element => {
+    const { name, lessonDescription, updateAction } = props;
     const classes = useStyles();
+
+    const handleUpdate = (state: RequestRespiteState) => {
+        if (updateAction !== undefined) {
+            updateAction(state);
+        }
+    };
 
     return (
         <Paper className={classes.wrap}>
@@ -44,7 +54,14 @@ export const RequestingRespite = (
                         label="Name"
                         variant="outlined"
                         aria-describedby="RequestingRespite-NameHelpText"
-                        value={props.name}
+                        value={name}
+                        onChange={(
+                            event: React.ChangeEvent<HTMLInputElement>
+                        ) => {
+                            handleUpdate({
+                                name: event.target.value,
+                            });
+                        }}
                         fullWidth
                         required
                     />
@@ -64,7 +81,14 @@ export const RequestingRespite = (
                         variant="outlined"
                         aria-describedby="RequestingRespite-LessonDescriptionHelpText"
                         fullWidth
-                        value={props.lessonDescription}
+                        value={lessonDescription}
+                        onChange={(
+                            event: React.ChangeEvent<HTMLInputElement>
+                        ) => {
+                            handleUpdate({
+                                lessonDescription: event.target.value,
+                            });
+                        }}
                         multiline
                         rows={10}
                         required

@@ -3,6 +3,7 @@ import { bindActionCreators, Dispatch } from "redux";
 
 import { RequestingRespite } from "./RequestingRespite";
 import { RootReducerState } from "../../redux/reducers";
+import { updateRequestRespiteAction } from "../../redux/actions/RequestRespite";
 
 const mapStateToProps = (state: RootReducerState) => {
     return {
@@ -12,7 +13,12 @@ const mapStateToProps = (state: RootReducerState) => {
 };
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
-    return bindActionCreators({}, dispatch);
+    return bindActionCreators(
+        {
+            updateAction: updateRequestRespiteAction,
+        },
+        dispatch
+    );
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(RequestingRespite);

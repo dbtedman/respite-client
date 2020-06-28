@@ -7,10 +7,7 @@ export interface RequestRespiteState {
     lessonDescription?: string;
 }
 
-const initialState: RequestRespiteState = {
-    name: "Default Name",
-    lessonDescription: "Default Lesson Description",
-};
+const initialState: RequestRespiteState = {};
 
 export const requestRespite = (
     state: RequestRespiteState = initialState,
