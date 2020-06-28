@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 import { AnyAction } from "redux";
-import { RequestRespiteState } from "redux/reducers/RequestRespite";
+
+import { RequestRespiteState } from "../../redux/reducers/RequestRespite";
 
 const useStyles = makeStyles((theme) => ({
     wrap: {
@@ -37,6 +38,10 @@ export const RequestingRespite = (
     props: RequestingRespiteProps
 ): JSX.Element => {
     const { name, lessonDescription, updateAction } = props;
+    const [localName, setLocalName] = useState(name === undefined ? "" : name);
+    const [localLessonDescription, setLocalLessonDescription] = useState(
+        lessonDescription === undefined ? "" : lessonDescription
+    );
     const classes = useStyles();
 
     const handleUpdate = (state: RequestRespiteState) => {
@@ -54,10 +59,11 @@ export const RequestingRespite = (
                         label="Name"
                         variant="outlined"
                         aria-describedby="RequestingRespite-NameHelpText"
-                        value={name}
+                        value={localName}
                         onChange={(
                             event: React.ChangeEvent<HTMLInputElement>
                         ) => {
+                            setLocalName(event.target.value);
                             handleUpdate({
                                 name: event.target.value,
                             });
@@ -81,10 +87,11 @@ export const RequestingRespite = (
                         variant="outlined"
                         aria-describedby="RequestingRespite-LessonDescriptionHelpText"
                         fullWidth
-                        value={lessonDescription}
+                        value={localLessonDescription}
                         onChange={(
                             event: React.ChangeEvent<HTMLInputElement>
                         ) => {
+                            setLocalLessonDescription(event.target.value);
                             handleUpdate({
                                 lessonDescription: event.target.value,
                             });
@@ -109,6 +116,14 @@ export const RequestingRespite = (
                         className={classes.cta}
                         variant="contained"
                         color="secondary"
+                        onClick={() => {
+                            setLocalName("");
+                            setLocalLessonDescription("");
+                            handleUpdate({
+                                name: undefined,
+                                lessonDescription: undefined,
+                            });
+                        }}
                     >
                         Clear
                     </Button>

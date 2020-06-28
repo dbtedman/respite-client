@@ -10,10 +10,24 @@ export const RequestingRespiteDefault = (): JSX.Element => (
     </React.Fragment>
 );
 
+export const RequestingRespitePopulated = (): JSX.Element => (
+    <React.Fragment>
+        <CssBaseline />
+        <RequestingRespite
+            name="Jane Doe"
+            lessonDescription="Currently we are covering the topic of XYZ and have reached the ABC level."
+        />
+    </React.Fragment>
+);
+
 export default {
     title: "Requesting Respite",
 };
 
 RequestingRespiteDefault.story = {
-    name: "default",
+    name: "Default",
+};
+
+RequestingRespitePopulated.story = {
+    name: "Populated",
 };

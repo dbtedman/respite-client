@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 
 import { RequestingRespite } from "./RequestingRespite";
 
@@ -15,6 +15,13 @@ describe("RequestingRespite", () => {
 
     it("contains clear", () => {
         expect(screen.getByText(/Clear/)).toBeInTheDocument();
+    });
+
+    it("clear works", async () => {
+        fireEvent.click(screen.getByText(/Clear/));
+        await expect((screen.getByLabelText(/Name/) as HTMLInputElement).value).toBe(
+            ""
+        );
     });
 
     it("contains requester's name", () => {
