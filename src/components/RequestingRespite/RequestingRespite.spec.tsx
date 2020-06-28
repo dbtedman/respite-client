@@ -13,6 +13,10 @@ describe("RequestingRespite", () => {
         expect(screen.getByText(/Request Respite/)).toBeInTheDocument();
     });
 
+    it("contains clear", () => {
+        expect(screen.getByText(/Clear/)).toBeInTheDocument();
+    });
+
     it("contains requester's name", () => {
         expect(screen.getByLabelText(/Name/)).toBeInTheDocument();
     });
