@@ -25,7 +25,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const RequestingRespite = (): JSX.Element => {
+export interface RequestingRespiteProps {
+    name?: string;
+    lessonDescription?: string;
+}
+
+export const RequestingRespite = (
+    props: RequestingRespiteProps
+): JSX.Element => {
     const classes = useStyles();
 
     return (
@@ -37,6 +44,7 @@ export const RequestingRespite = (): JSX.Element => {
                         label="Name"
                         variant="outlined"
                         aria-describedby="RequestingRespite-NameHelpText"
+                        value={props.name}
                         fullWidth
                         required
                     />
@@ -56,6 +64,7 @@ export const RequestingRespite = (): JSX.Element => {
                         variant="outlined"
                         aria-describedby="RequestingRespite-LessonDescriptionHelpText"
                         fullWidth
+                        value={props.lessonDescription}
                         multiline
                         rows={10}
                         required

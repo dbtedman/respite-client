@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { Provider } from "react-redux";
 
-import { RequestingRespite } from "./components/RequestingRespite/RequestingRespite";
+import { store } from "./redux/Store";
+import RequestingRespiteWithStore from "./components/RequestingRespite/RequestingRespiteWithStore";
 
 ReactDOM.render(
-    <React.Fragment>
+    <Provider store={store}>
         <CssBaseline />
-        <RequestingRespite />
-    </React.Fragment>,
+        <RequestingRespiteWithStore />
+    </Provider>,
     document.getElementById("root")
 );

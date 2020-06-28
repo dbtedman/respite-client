@@ -15,3 +15,6 @@
 
 # Don't include any log files
 *.log
+
+# Ensure these directories are kept, even when otherwise excluded
+!.keep
