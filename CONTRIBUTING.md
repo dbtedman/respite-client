@@ -35,9 +35,12 @@ yarn storybook
 
 ## References
 
+-   [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
 -   [Material Design](https://material.io/design)
 -   [Material UI](https://material-ui.com/)
 -   [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+-   [Setting up Storybook with Material UI and Styled Components](https://medium.com/encode/setting-up-storybook-with-material-ui-and-styled-components-5bdacb6db866)
+-   [Storybook / Add Custom Head Tags](https://storybook.js.org/docs/configurations/add-custom-head-tags/)
 -   [Storybook / Storybook for React](https://storybook.js.org/docs/guides/guide-react/)
 -   [Storybook / TypeScript Config](https://storybook.js.org/docs/configurations/typescript-config/)
 -   [The Practical Guide to Start React Testing Library with TypeScript.](https://medium.com/javascript-in-plain-english/the-practical-guide-to-start-react-testing-library-with-typescript-d386804a018)
