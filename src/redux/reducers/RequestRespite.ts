@@ -5,6 +5,7 @@ import { UPDATE_REQUEST_RESPITE } from "../actions/RequestRespite";
 export interface RequestRespiteState {
     name?: string;
     lessonDescription?: string;
+    lessonLocation?: string;
 }
 
 const initialState: RequestRespiteState = {};

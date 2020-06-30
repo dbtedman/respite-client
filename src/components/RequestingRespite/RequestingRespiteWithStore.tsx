@@ -9,6 +9,7 @@ const mapStateToProps = (state: RootReducerState) => {
     return {
         name: state.requestRespite.name,
         lessonDescription: state.requestRespite.lessonDescription,
+        lessonLocation: state.requestRespite.lessonLocation,
     };
 };
 

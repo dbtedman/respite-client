@@ -22,83 +22,117 @@ const useStyles = makeStyles((theme) => ({
     },
     instructions: {
         "max-width": "600px",
+        "margin-top": theme.spacing(1),
+        "margin-bottom": theme.spacing(4),
     },
     ctaGroup: {
         "margin-top": theme.spacing(4),
+    },
+    section: {
+        "margin-top": theme.spacing(1),
+        "margin-bottom": theme.spacing(2),
     },
 }));
 
 export interface RequestingRespiteProps {
     name?: string;
     lessonDescription?: string;
+    lessonLocation?: string;
     updateAction?: (payload: RequestRespiteState) => AnyAction;
 }
 
 export const RequestingRespite = (
     props: RequestingRespiteProps
 ): JSX.Element => {
-    const { name, lessonDescription, updateAction } = props;
-    const [localName, setLocalName] = useState(name === undefined ? "" : name);
-    const [localLessonDescription, setLocalLessonDescription] = useState(
-        lessonDescription === undefined ? "" : lessonDescription
+    const [name, setName] = useState(
+        props.name === undefined ? "" : props.name
     );
+    const [lessonDescription, setLessonDescription] = useState(
+        props.lessonDescription === undefined ? "" : props.lessonDescription
+    );
+    const [lessonLocation, setLessonLocation] = useState(
+        props.lessonLocation === undefined ? "" : props.lessonLocation
+    );
+
     const classes = useStyles();
 
-    const handleUpdate = (state: RequestRespiteState) => {
-        if (updateAction !== undefined) {
-            updateAction(state);
+    const handleClear = () => {
+        setName("");
+        setLessonDescription("");
+        setLessonLocation("");
+
+        if (props.updateAction !== undefined) {
+            props.updateAction({
+                name: undefined,
+                lessonDescription: undefined,
+                lessonLocation: undefined,
+            });
+        }
+    };
+
+    const handleUpdateName = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setName(event.target.value);
+
+        if (props.updateAction !== undefined) {
+            props.updateAction({
+                name: event.target.value,
+            });
+        }
+    };
+
+    const handleUpdateLessonDescription = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        setLessonDescription(event.target.value);
+
+        if (props.updateAction !== undefined) {
+            props.updateAction({
+                lessonDescription: event.target.value,
+            });
+        }
+    };
+
+    const handleUpdateLessonLocation = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        setLessonLocation(event.target.value);
+
+        if (props.updateAction !== undefined) {
+            props.updateAction({
+                lessonLocation: event.target.value,
+            });
         }
     };
 
     return (
         <Paper className={classes.wrap}>
             <form className={classes.form} noValidate autoComplete="off">
-                <div>
+                <h1>Request Respite</h1>
+
+                <div className={classes.section}>
                     <TextField
                         id="RequestingRespite-Name"
-                        label="Name"
-                        variant="outlined"
-                        aria-describedby="RequestingRespite-NameHelpText"
-                        value={localName}
-                        onChange={(
-                            event: React.ChangeEvent<HTMLInputElement>
-                        ) => {
-                            setLocalName(event.target.value);
-                            handleUpdate({
-                                name: event.target.value,
-                            });
-                        }}
                         fullWidth
+                        label="Name"
+                        onChange={handleUpdateName}
                         required
+                        value={name}
+                        variant="outlined"
                     />
-
-                    <p
-                        className={classes.instructions}
-                        id="RequestingRespite-NameHelpText"
-                    >
-                        Some extra information.
-                    </p>
                 </div>
 
-                <div>
+                <div className={classes.section}>
                     <TextField
-                        id="RequestingRespite-LessonDescription"
-                        label="Lesson Description"
-                        variant="outlined"
                         aria-describedby="RequestingRespite-LessonDescriptionHelpText"
                         fullWidth
-                        value={localLessonDescription}
-                        onChange={(
-                            event: React.ChangeEvent<HTMLInputElement>
-                        ) => {
-                            setLocalLessonDescription(event.target.value);
-                            handleUpdate({
-                                lessonDescription: event.target.value,
-                            });
-                        }}
+                        id="RequestingRespite-LessonDescription"
+                        label="Lesson Description"
                         multiline
-                        rows={10}
+                        onChange={handleUpdateLessonDescription}
                         required
+                        rows={10}
+                        value={lessonDescription}
+                        variant="outlined"
                     />
 
                     <p
@@ -111,28 +145,42 @@ export const RequestingRespite = (
                     </p>
                 </div>
 
+                <div className={classes.section}>
+                    <TextField
+                        aria-describedby="RequestingRespite-LessonLocation"
+                        fullWidth
+                        id="RequestingRespite-LessonLocation"
+                        label="Lesson Location"
+                        onChange={handleUpdateLessonLocation}
+                        required
+                        value={lessonLocation}
+                        variant="outlined"
+                    />
+
+                    <p
+                        className={classes.instructions}
+                        id="RequestingRespite-LessonLocationHelpText"
+                    >
+                        Providing a clear lesson location will better enable our
+                        system to match your request with the correct educator.
+                    </p>
+                </div>
+
                 <div className={classes.ctaGroup}>
                     <Button
                         className={classes.cta}
-                        variant="contained"
                         color="secondary"
-                        onClick={() => {
-                            setLocalName("");
-                            setLocalLessonDescription("");
-                            handleUpdate({
-                                name: undefined,
-                                lessonDescription: undefined,
-                            });
-                        }}
+                        onClick={handleClear}
+                        variant="contained"
                     >
                         Clear
                     </Button>
                     <Button
                         className={classes.cta}
-                        variant="contained"
                         color="primary"
+                        variant="contained"
                     >
-                        Request Respite
+                        Request
                     </Button>
                 </div>
             </form>
