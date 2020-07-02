@@ -1,9 +1,15 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { Provider } from "react-redux";
 
-import { Hello } from "./components/Hello";
+import { store } from "./redux/Store";
+import RequestingRespiteWithStore from "./components/RequestingRespite/RequestingRespiteWithStore";
 
 ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React" />,
-    document.getElementById("example")
+    <Provider store={store}>
+        <CssBaseline />
+        <RequestingRespiteWithStore />
+    </Provider>,
+    document.getElementById("root")
 );

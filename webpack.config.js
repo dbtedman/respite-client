@@ -4,15 +4,21 @@
 //
 //------------------------------------------------------------------------------
 
-module.exports = {
-    mode: "production",
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-    // Enable sourcemaps for debugging webpack's output.
+module.exports = {
     devtool: "source-map",
 
     resolve: {
-        // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".ts", ".tsx", ".js", ".jsx"],
+    },
+
+    devServer: {
+        contentBase: "./dist",
+        historyApiFallback: true,
+        port: process.env.PORT || 8080,
+        host: process.env.HOST || "localhost",
     },
 
     module: {
@@ -26,7 +32,6 @@ module.exports = {
                     },
                 ],
             },
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             {
                 enforce: "pre",
                 test: /\.js$/,
@@ -35,12 +40,9 @@ module.exports = {
         ],
     },
 
-    // When importing a module whose path matches one of the following, just
-    // assume a corresponding global variable exists and use that instead.
-    // This is important because it allows us to avoid bundling all of our
-    // dependencies, which allows browsers to cache those libraries between builds.
-    externals: {
-        react: "React",
-        "react-dom": "ReactDOM",
-    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: `${__dirname}/src/public/index.html`,
+        }),
+    ],
 };

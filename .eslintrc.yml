@@ -29,6 +29,8 @@ extends:
     - "plugin:security-node/recommended"
     - "plugin:promise/recommended"
     - "plugin:react/recommended"
+    - "plugin:testing-library/react"
+    - "plugin:jest-dom/recommended"
 rules: {}
 env:
     browser: true
