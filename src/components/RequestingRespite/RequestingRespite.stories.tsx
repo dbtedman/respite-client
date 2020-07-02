@@ -16,6 +16,7 @@ export const RequestingRespitePopulated = (): JSX.Element => (
         <RequestingRespite
             name="Jane Doe"
             lessonDescription="Currently we are covering the topic of XYZ and have reached the ABC level."
+            lessonLocation="Classroom A23, Anywhere High"
         />
     </React.Fragment>
 );
