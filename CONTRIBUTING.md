@@ -1,4 +1,4 @@
-# [Respite Client](./README.md) / Contributing
+# [Respite](./README.md) / Contributing
 
 -   [Linting and Formatting](#linting-and-formatting)
 -   [Testing](#testing)
