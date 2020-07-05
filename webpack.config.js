@@ -8,10 +8,14 @@
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require("path");
 
 module.exports = {
     entry: `${__dirname}/client/client.tsx`,
-
+    output: {
+        path: path.resolve(__dirname, "dist/assets"),
+    },
     devtool: "source-map",
 
     resolve: {
@@ -48,6 +52,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: true,
             template: `${__dirname}/client/public/index.html`,
+            filename: "../index.html",
         }),
     ],
 };
