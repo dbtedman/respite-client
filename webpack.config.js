@@ -8,7 +8,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: `${__dirname}/src/spa.tsx`,
+    entry: `${__dirname}/client/index.tsx`,
 
     devtool: "source-map",
 
@@ -30,7 +30,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: "ts-loader",
+                        loader: "babel-loader",
                     },
                 ],
             },
@@ -44,7 +44,8 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: `${__dirname}/src/public/index.html`,
+            inject: true,
+            template: `${__dirname}/client/public/index.html`,
         }),
     ],
 };

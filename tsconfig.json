@@ -8,12 +8,12 @@
         "noImplicitAny": true,
         "outDir": "./dist",
         "paths": {
-            "*": ["node_modules/*", "src/*"]
+            "*": ["node_modules/*", "client/*"]
         },
         "sourceMap": true,
         "strict": true,
         "target": "es6",
         "jsx": "react"
     },
-    "include": ["./src/**/*"]
+    "include": ["./client/**/*"]
 }

@@ -5,7 +5,7 @@
 //------------------------------------------------------------------------------
 
 module.exports = {
-    stories: ["../src/**/*.stories.tsx"],
+    stories: ["../client/**/*.stories.tsx"],
     addons: ["@storybook/addon-actions", "@storybook/addon-links"],
     webpackFinal: async (config) => {
         config.module.rules.push({
