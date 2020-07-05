@@ -9,4 +9,4 @@
 #-------------------------------------------------------------------------------
 ---
 hooks:
-    pre-commit: "yarn lint && yarn test"
+    pre-commit: "yarn lint && yarn test && gofmt -l ./server/ && go test ./server/..."
