@@ -4,11 +4,13 @@
 //
 //------------------------------------------------------------------------------
 
+// TODO: Switch to https://webpack.js.org/configuration/configuration-languages/#typescript
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: `${__dirname}/client/index.tsx`,
+    entry: `${__dirname}/client/client.tsx`,
 
     devtool: "source-map",
 

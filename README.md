@@ -20,7 +20,9 @@ yarn serve
 
 ### Server
 
-_Content to come._
+```shell script
+go mod vendor && go build -mod=vendor -o ./respite && ./respite
+```
 
 ## Want to lean more?
 

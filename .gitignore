@@ -10,11 +10,17 @@
 # Don't include NPM dependencies
 /node_modules/
 
+# Don't include GoMod dependencies
+/vendor/
+
 # Don't include test results
 /coverage/
 
 # Don't include any log files
 *.log
+
+# Don't include compiled output
+/respite
 
 # Ensure these directories are kept, even when otherwise excluded
 !.keep
