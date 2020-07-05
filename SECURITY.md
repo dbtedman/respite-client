@@ -1,4 +1,4 @@
-# [Respite Client](./README.md) / Security Guide
+# [Respite](./README.md) / Security Guide
 
 -   [Dependency Vulnerability Scanning](#dependency-vulnerability-scanning)
 -   [Security Disclosure Policy](#security-disclosure-policy)
@@ -8,9 +8,9 @@
 
 ## Dependency Vulnerability Scanning
 
-[![Known Vulnerabilities](https://snyk.io/test/github/dbtedman/respite-client/badge.svg)](https://snyk.io/test/github/dbtedman/respite-client)
+[![Known Vulnerabilities](https://snyk.io/test/github/dbtedman/respite/badge.svg)](https://snyk.io/test/github/dbtedman/respite)
 
-Provided by [Snyk](https://snyk.io/test/github/dbtedman/respite-client).
+Provided by [Snyk](https://snyk.io/test/github/dbtedman/respite).
 
 ## Security Disclosure Policy
 
@@ -26,4 +26,4 @@ None currently.
 
 ## Known Security Gaps and Future Enhancements
 
-Look at [GitHub issues tagged **Security**](https://github.com/dbtedman/respite-client/respite/labels/security).
+Look at [GitHub issues tagged **Security**](https://github.com/dbtedman/respite/respite/labels/security).

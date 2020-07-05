@@ -4,10 +4,18 @@
 //
 //------------------------------------------------------------------------------
 
+// TODO: Switch to https://webpack.js.org/configuration/configuration-languages/#typescript
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require("path");
 
 module.exports = {
+    entry: `${__dirname}/client/client.tsx`,
+    output: {
+        path: path.resolve(__dirname, "dist/assets"),
+    },
     devtool: "source-map",
 
     resolve: {
@@ -28,7 +36,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: "ts-loader",
+                        loader: "babel-loader",
                     },
                 ],
             },
@@ -42,7 +50,9 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: `${__dirname}/src/public/index.html`,
+            inject: true,
+            template: `${__dirname}/client/public/index.html`,
+            filename: "../index.html",
         }),
     ],
 };

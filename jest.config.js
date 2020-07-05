@@ -5,7 +5,7 @@
 //------------------------------------------------------------------------------
 
 module.exports = {
-    roots: ["<rootDir>/src"],
+    roots: ["<rootDir>/client"],
     preset: "ts-jest",
     testEnvironment: "jsdom",
     transform: {

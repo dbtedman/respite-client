@@ -1,4 +1,4 @@
-# [Respite Client](./README.md) / Contributing
+# [Respite](./README.md) / Contributing
 
 -   [Linting and Formatting](#linting-and-formatting)
 -   [Testing](#testing)
@@ -36,6 +36,7 @@ yarn storybook
 ## References
 
 -   [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
+-   [Gorilla Toolkit / package mux](https://www.gorillatoolkit.org/pkg/mux)
 -   [Material Design](https://material.io/design)
 -   [Material UI](https://material-ui.com/)
 -   [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)

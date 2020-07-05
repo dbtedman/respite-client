@@ -33,8 +33,14 @@ jobs:
               with:
                   node-version: "12.x"
 
-            - name: "Install"
-              run: "yarn install --no-audit"
+            - name: "Set up Go 1.14"
+              uses: "actions/setup-go@v1"
+              with:
+                  go-version: 1.14
+              id: "go"
+
+            - name: "Install Dependencies"
+              run: "go mod vendor && yarn install --no-audit"
 
             - name: "Verify"
-              run: "yarn lint && yarn test"
+              run: "yarn lint && yarn test && gofmt -l ./server/ && go test ./server/..."
