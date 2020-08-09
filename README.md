@@ -1,8 +1,6 @@
 # [Respite](https://github.com/dbtedman/respite)
 
-> NOTE: Pre-release software, not for production use.
-
-[![Test Workflow Status](https://github.com/dbtedman/respite/workflows/Test/badge.svg)](https://github.com/dbtedman/respite/actions?workflow=Test)
+> IMPORTANT: This project is no longer maintained.
 
 Providing respite by matching desired capacity to available talent.
 
