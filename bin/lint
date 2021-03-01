@@ -16,6 +16,17 @@ info_message "${task} // Begin"
 info_message "${task} // Prettier Lint"
 ensure yarn lint
 
+info_message "${task} // Go Lint"
+ensure gofmt -l \
+    ./main.go \
+    ./entity \
+    ./error \
+    ./gateway \
+    ./port \
+    ./presenter \
+    ./repository \
+    ./usecase
+
 success_message "${task} // End"
 
 cd "${DIR_CURRENT}" || exit

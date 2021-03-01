@@ -1,0 +1,11 @@
+# Don't include yarn dependencies
+/node_modules/
+
+# Don't include go dependencies
+/vendor/
+
+# Don't include git
+/.git/
+
+# Don't include IDE configuration
+/.idea/

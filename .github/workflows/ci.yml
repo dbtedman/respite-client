@@ -12,18 +12,30 @@ env:
 
 jobs:
     run:
-        runs-on: "ubuntu-latest"
+        runs-on: "ubuntu-20.04"
 
         steps:
             - uses: "actions/checkout@v1"
 
-            - name: "Set up Node.js"
+            - name: "Prepare Node"
               uses: "actions/setup-node@v1"
               with:
-                  node-version: "14.15"
+                  node-version: "15.6.0"
+
+            - name: "Prepare Go"
+              uses: "actions/setup-go@v1"
+              with:
+                  go-version: "1.15"
+              id: "go"
 
             - name: "Install"
-              run: "yarn install --no-audit"
+              run: "yarn install --no-audit && go mod vendor"
 
             - name: "Lint"
               run: "./bin/lint"
+
+            - name: "Test"
+              run: "./bin/test"
+
+            - name: "Publish Coverage"
+              run: "bash <(curl -s https://codecov.io/bash)"

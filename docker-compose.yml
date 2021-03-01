@@ -1,0 +1,8 @@
+---
+version: "3.7"
+
+services:
+    web:
+        container_name: "respite_web"
+        build:
+            context: "."
