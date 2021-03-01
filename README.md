@@ -1,31 +1,34 @@
 # [Respite](https://github.com/dbtedman/respite)
 
-> IMPORTANT: This project is no longer maintained.
+> ⚠️ WARNING: This is pre-release software, please wait till version `1.*` before using in production.
+
+[![CI Results](https://github.com/dbtedman/respite/workflows/ci/badge.svg)](https://github.com/dbtedman/respite/actions?workflow=ci)
 
 Providing respite by matching desired capacity to available talent.
 
--   [How to get started for development?](#how-to-get-started-for-development)
--   [What is the Respite Platform?](#what-is-the-respite-platform)
--   [Want to lean more?](#want-to-lean-more)
+-   [How to use this platform?](#how-to-use-this-platform)
+-   [How to contribute?](#how-to-contribute)
+-   [Is this project secure?](#is-this-project-secure)
+-   [How is the project structured?](#how-is-the-project-structured)
+-   [License](#license)
 
-## How to get started for development?
+## How to use this platform?
 
-### Client
+_Content to come._
 
-```shell script
-yarn serve
-```
+## How to contribute?
 
-### Server
+Read our [Contributing Guide](CONTRIBUTING.md) to learn more about how to contribute to this project, and our [Changelog](CHANGELOG.md) to see what has already been implemented.
 
-```shell script
-go mod vendor && go build -mod=vendor -o ./respite && ./respite
-```
+## Is this project secure?
 
-## Want to lean more?
+Read our [Security Guide](SECURITY.md) to learn how security is considered during the development and operation of this
+plugin.
 
--   See our [Contributing Guide](CONTRIBUTING.md) for details on how this repository is developed.
--   See our [Changelog](CHANGELOG.md) for details on which features, improvements, and bug fixes have been implemented
--   See our [License](LICENSE.md) for details on how you can use the code in this repository.
--   See our [Security Guide](SECURITY.md) for details on how security is considered.
--   See our [Architecture Guide](ARCHITECTURE.md) for details on how the product is structured.
+## How is the project structured?
+
+Read our [Architecture Document](ARCHITECTURE.md) to learn how this project is structured.
+
+## License
+
+The [MIT License](./LICENSE.md) is used by this project.

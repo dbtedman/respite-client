@@ -1,7 +1,2 @@
-#-------------------------------------------------------------------------------
-#
-# Git Ignore Config, https://git-scm.com/docs/gitattributes.
-#
-#-------------------------------------------------------------------------------
-
+# Commit files with correct line endings
 * text=auto eol=lf

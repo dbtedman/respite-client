@@ -1,26 +1,14 @@
-#-------------------------------------------------------------------------------
-#
-# Git Ignore Config, https://git-scm.com/docs/gitignore.
-#
-#-------------------------------------------------------------------------------
-
-# Don't include build output
-/dist/
-
-# Don't include NPM dependencies
+# Don't include Yarn dependencies
 /node_modules/
 
-# Don't include GoMod dependencies
+# Don't include Go Mod dependencies
 /vendor/
 
-# Don't include test results
-/coverage/
+# Don't include IDE configuraiton
+/.idea/
 
-# Don't include any log files
-*.log
+# Don't include coverage reports
+/coverage.txt
 
-# Don't include compiled output
-/respite
-
-# Ensure these directories are kept, even when otherwise excluded
+# Keep this file even if directory has been ignored
 !.keep

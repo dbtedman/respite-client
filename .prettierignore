@@ -1,20 +1,9 @@
-#-------------------------------------------------------------------------------
-#
-# Prettier Ignores, https://prettier.io/docs/en/ignore.html
-#
-#-------------------------------------------------------------------------------
-
-# Don't include build output
-/dist/
-
-# Don't include NPM dependencies
+# Don't touch Yarn dependencies
 /node_modules/
-
-# Don't include go dependencies
-/vendor/
-
-# Don't include auto-generated lock file
 /yarn.lock
 
-# Don't include test results
-/coverage/
+# Don't touch Go Mod dependencies
+/vendor/
+
+# Don't touch IDE configuraiton
+/.idea/
