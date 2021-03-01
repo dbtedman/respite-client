@@ -9,23 +9,15 @@ source ./_shared
 
 cd "${DIR_ROOT}" || exit
 
-task="Format"
+task="Local"
 
 info_message "${task} // Begin"
 
-info_message "${task} // Prettier Format"
-ensure yarn format
+info_message "${task} // Remove Existing Environment"
+ensure docker-compose down --volumes --rmi local
 
-info_message "${task} // Go Format"
-ensure gofmt -w \
-    ./main.go \
-    ./entity \
-    ./error \
-    ./gateway \
-    ./port \
-    ./presenter \
-    ./repository \
-    ./usecase
+info_message "${task} // Provision New Environment"
+ensure docker-compose up --detach
 
 success_message "${task} // End"
 

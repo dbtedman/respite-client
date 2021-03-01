@@ -9,23 +9,20 @@ source ./_shared
 
 cd "${DIR_ROOT}" || exit
 
-task="Format"
+task="Test"
 
 info_message "${task} // Begin"
 
-info_message "${task} // Prettier Format"
-ensure yarn format
-
-info_message "${task} // Go Format"
-ensure gofmt -w \
-    ./main.go \
-    ./entity \
-    ./error \
-    ./gateway \
-    ./port \
-    ./presenter \
-    ./repository \
-    ./usecase
+info_message "${task} // Go Test"
+ensure go test \
+    -cover -coverprofile=coverage.txt \
+    ./entity/... \
+    ./error/... \
+    ./gateway/... \
+    ./port/... \
+    ./presenter/... \
+    ./repository/... \
+    ./usecase/...
 
 success_message "${task} // End"
 

@@ -3,6 +3,8 @@
 > ⚠️ WARNING: This is pre-release software, please wait till version `1.*` before using in production.
 
 [![CI Results](https://github.com/dbtedman/respite/workflows/ci/badge.svg)](https://github.com/dbtedman/respite/actions?workflow=ci)
+[![Test Code Coverage](https://codecov.io/gh/dbtedman/respite/branch/master/graph/badge.svg)](https://codecov.io/gh/dbtedman/respite)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dbtedman/respite)](https://goreportcard.com/report/github.com/dbtedman/respite)
 
 Providing respite by matching desired capacity to available talent.
 
